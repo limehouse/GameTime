@@ -8,7 +8,7 @@ body
 {
   background-color: var(--charcoal);
   color: var(--text);
-  font-family: 'Bloomberg Fixed Unicode B';
+  font-family: 'Ubuntu Condensed';
   font-size: xx-large;
 }
 
@@ -26,4 +26,5 @@ button
 section#clock
 {
   margin: 10px 0;
+  font-family: 'Bloomberg Fixed Unicode B';
 }

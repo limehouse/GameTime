@@ -5,19 +5,23 @@ let change = 15;
 
 set();
 
-function set(min = m, sec = s)
+function set(sec = s)
 {
   let minutes = Math.floor(sec/60);
-  if (minutes < 10) minutes = '0' + minutes;
   let seconds = sec % 60;
+  if (minutes < 10) minutes = '0' + minutes;
   if (seconds < 10) seconds = '0' + seconds;
-  if (m == 0 && s == 0)
+  if (s == 0)
   {
     document.getElementById('start').disabled = true;
+    document.getElementById('submin').disabled = true;
+    document.getElementById('subsec').disabled = true;
   }
   else
   {
     document.getElementById('start').disabled = false;
+    document.getElementById('submin').disabled = false;
+    document.getElementById('subsec').disabled = false;
   }
   document.getElementById('clock').innerHTML = `${minutes}:${seconds}`;
 }
@@ -25,8 +29,11 @@ function set(min = m, sec = s)
 function start(a)
 {
   console.log(a.id);
+  document.getElementById('start').disabled = true;
   document.getElementById('addmin').disabled = true;
   document.getElementById('submin').disabled = true;
+  document.getElementById('addsec').disabled = true;
+  document.getElementById('subsec').disabled = true;
   countdown('clock', m, s);
 }
 
@@ -40,7 +47,7 @@ function addMin(a)
 function subMin(a)
 {
   console.log(m, s);
-  if (m > 0 || s > 59) s -= 60;
+  if (s > 59) s -= 60;
   set();
 }
 
@@ -54,7 +61,7 @@ function addSec(a)
 function subSec(a)
 {
   console.log(m, s);
-  if (m > 0 || s > 29) s -= 30;
+  if (s > 29) s -= 30;
   set();
 }
 
@@ -65,6 +72,7 @@ function countdown(element, minutes, seconds) {
       var el = document.getElementById(element);
       // if the time is 0 then end the counter
       if (time <= 0) {
+          playAudio();
           var text = "Change!";
           el.innerHTML = text;
           setTimeout(function() {
@@ -82,4 +90,9 @@ function countdown(element, minutes, seconds) {
       time--;
       console.log(minutes, ':', seconds)
   }, 1000);
+}
+
+function playAudio()
+{
+  document.getElementById('myAudio').play();
 }
