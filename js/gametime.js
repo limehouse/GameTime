@@ -1,7 +1,7 @@
 let play = false;
 let m = 0;
 let s = 180;
-let change = 1;
+let change = 15;
 
 set();
 
@@ -25,22 +25,36 @@ function set(min = m, sec = s)
 function start(a)
 {
   console.log(a.id);
-  document.getElementById('plusm').disabled = true;
-  document.getElementById('minusm').disabled = true;
+  document.getElementById('addmin').disabled = true;
+  document.getElementById('submin').disabled = true;
   countdown('clock', m, s);
 }
 
-function plusm(a)
+function addMin(a)
 {
   console.log(m, s);
   s += 60;
   set();
 }
 
-function minusm(a)
+function subMin(a)
 {
   console.log(m, s);
   if (m > 0 || s > 59) s -= 60;
+  set();
+}
+
+function addSec(a)
+{
+  console.log(m, s);
+  s += 30;
+  set();
+}
+
+function subSec(a)
+{
+  console.log(m, s);
+  if (m > 0 || s > 29) s -= 30;
   set();
 }
 
