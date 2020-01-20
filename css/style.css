@@ -1,0 +1,29 @@
+:root
+{
+  --charcoal: #1e1e1e;
+  --text: #ddd;
+}
+
+body
+{
+  background-color: var(--charcoal);
+  color: var(--text);
+  font-family: 'Bloomberg Fixed Unicode B';
+  font-size: xx-large;
+}
+
+section
+{
+  font-family: inherit;
+}
+
+button
+{
+  font-family: inherit;
+  font-size: x-large;
+}
+
+section#clock
+{
+  margin: 10px 0;
+}
