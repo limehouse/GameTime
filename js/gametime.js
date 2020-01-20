@@ -2,6 +2,7 @@ let play = false;
 let m = 0;
 let s = 180;
 let change = 15;
+let warn = 5;
 
 set();
 
@@ -70,14 +71,24 @@ function countdown(element, minutes, seconds) {
   var time = minutes*60 + seconds;
   var interval = setInterval(function() {
       var el = document.getElementById(element);
+      // if the time is 15 then warn players to prepare for changeover
+      if (time <= warn)
+      {
+        playAudio(1);
+        document.getElementsByTagName('body')[0].style.backgroundColor = '#DC143C';
+      }
+      else
+      {
+        document.getElementsByTagName('body')[0].style.backgroundColor = '#1E1E1E';
+      }
       // if the time is 0 then end the counter
       if (time <= 0) {
-          playAudio();
+          playAudio(0);
           var text = "Change!";
           el.innerHTML = text;
           setTimeout(function() {
               countdown('clock', m, s);
-          }, change);
+          }, change * 1000);
           clearInterval(interval);
           return;
       }
@@ -88,11 +99,18 @@ function countdown(element, minutes, seconds) {
       var text = minutes + ':' + seconds;
       el.innerHTML = text;
       time--;
-      console.log(minutes, ':', seconds)
   }, 1000);
 }
 
-function playAudio()
+function playAudio(i)
 {
-  document.getElementById('myAudio').play();
+  switch (i)
+  {
+    case 0:
+      document.getElementById('horn').play();
+      break;
+    case 1:
+      document.getElementById('beep').play();
+      break;
+  }
 }
