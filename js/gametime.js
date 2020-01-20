@@ -1,8 +1,9 @@
 let play = false;
 let m = 0;
-let s = 180;
-let change = 15;
+let s = 10;
+let change = 5;
 let warn = 5;
+let game = 1;
 
 set();
 
@@ -69,10 +70,10 @@ function subSec(a)
 function countdown(element, minutes, seconds) {
   // set time for the particular countdown
   var time = minutes*60 + seconds;
+  var el = document.getElementById(element);
   var interval = setInterval(function() {
-      var el = document.getElementById(element);
       // if the time is 15 then warn players to prepare for changeover
-      if (time <= warn)
+      if (time <= warn && time > 0)
       {
         playAudio(1);
         document.getElementsByTagName('body')[0].style.backgroundColor = '#DC143C';
@@ -82,7 +83,7 @@ function countdown(element, minutes, seconds) {
         document.getElementsByTagName('body')[0].style.backgroundColor = '#1E1E1E';
       }
       // if the time is 0 then end the counter
-      if (time <= 0) {
+      if (time == 0) {
           playAudio(0);
           var text = "Change!";
           el.innerHTML = text;
@@ -100,6 +101,8 @@ function countdown(element, minutes, seconds) {
       el.innerHTML = text;
       time--;
   }, 1000);
+  document.getElementById('counter').innerHTML = `${game}`;
+  game += 1;
 }
 
 function playAudio(i)
