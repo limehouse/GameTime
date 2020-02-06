@@ -8,16 +8,25 @@
   <title></title>
 </head>
 <body>
-  <nav id="topnav">
-    <button id="start" onclick="start(this)">Start Session</button>
-    <button id="addmin" onclick="addMin(this)">&plus;1m</button>
-    <button id="submin" onclick="subMin(this)">&minus;1m</button>
-    <button id="addsec" onclick="addSec(this)">&plus;30s</button>
-    <button id="subsec" onclick="subSec(this)">&minus;30s</button>
-  </nav>
   <article id="content">
+    <fieldset id="topnav">
+      <legend>Game Controls</legend>
+      <button id="start" onclick="start(this)">Start Session</button>
+      <button id="addmin" onclick="addMin(this)">&plus;1m</button>
+      <button id="submin" onclick="subMin(this)">&minus;1m</button>
+      <button id="addsec" onclick="addSec(this)">&plus;30s</button>
+      <button id="subsec" onclick="subSec(this)">&minus;30s</button>
+    </fieldset>
+    <fieldset id="teams">
+      <legend>Team Picker</legend>
+      <button id="black" onclick="pickTeam(this)">Black</button>
+      <button id="yellow" onclick="pickTeam(this)">Yellow</button>
+      <button id="white" onclick="pickTeam(this)">White</button>
+      The first team chosen will play ONE game.
+    </fieldset>
     <section id="clock"></section>
     <section id="game">Game <span id="counter">1</span></section>
+    <section id="playing"><span id="home"></span> vs <span id="away"></span></section>
   </article>
   <audio id="horn">
     <source src="mp3/hockey_goal_horn.mp3" type="audio/mpeg">

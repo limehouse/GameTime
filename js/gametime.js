@@ -4,6 +4,12 @@ let s = 10;
 let change = 5;
 let warn = 5;
 let game = 1;
+let jerseys = ['White', 'Black', 'Yellow'];
+let playing = [];
+let home = document.getElementById('home');
+let away = document.getElementById('away');
+let control = document.getElementById('teams');
+let topnav = document.getElementById('topnav');
 
 set();
 
@@ -36,6 +42,7 @@ function start(a)
   document.getElementById('submin').disabled = true;
   document.getElementById('addsec').disabled = true;
   document.getElementById('subsec').disabled = true;
+  topnav.style.display = 'none';
   countdown('clock', m, s);
 }
 
@@ -67,6 +74,44 @@ function subSec(a)
   set();
 }
 
+function pickTeam(t)
+{
+  if (home.innerHTML.length == 0)
+  {
+    home.innerHTML = t.innerHTML;
+    if (playing.length < jerseys.length)
+    {
+      t.disabled = true;
+      playing.splice(0, 0, t.innerHTML);
+    }
+  }
+  else
+  {
+    away.innerHTML = t.innerHTML;
+    if (playing.length < jerseys.length)
+    {
+      control.disabled = true;
+      control.style.display = 'none';
+      playing.splice(1, 0, t.innerHTML);
+    }
+  }
+  if (teams.disabled == true && playing.length != jerseys.length)
+  {
+    jerseys.forEach(function(j) {
+      if (!playing.includes(j))
+      {
+        playing.splice(2, 0, j)
+      }
+    });
+  }
+}
+
+function clearTeams()
+{
+  home.innerHTML = "";
+  away.innerHTML = "";
+}
+
 function countdown(element, minutes, seconds) {
   // set time for the particular countdown
   var time = minutes*60 + seconds;
@@ -86,6 +131,10 @@ function countdown(element, minutes, seconds) {
       if (time == 0) {
           playAudio(0);
           var text = "Change!";
+          clearTeams();
+          playing.push(playing.splice(0, 1)[0]);
+          pickTeam({ 'innerHTML' : playing[0] });
+          pickTeam({ 'innerHTML' : playing[1] });
           el.innerHTML = text;
           setTimeout(function() {
               countdown('clock', m, s);
