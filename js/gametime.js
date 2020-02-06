@@ -19,7 +19,7 @@ function set(sec = s)
   let seconds = sec % 60;
   if (minutes < 10) minutes = '0' + minutes;
   if (seconds < 10) seconds = '0' + seconds;
-  if (s == 0)
+  if (s == 0 || playing.length == 0)
   {
     document.getElementById('start').disabled = true;
     document.getElementById('submin').disabled = true;
@@ -74,6 +74,11 @@ function subSec(a)
   set();
 }
 
+function test(a)
+{
+  playAudio(2);
+}
+
 function pickTeam(t)
 {
   if (home.innerHTML.length == 0)
@@ -93,6 +98,7 @@ function pickTeam(t)
       control.disabled = true;
       control.style.display = 'none';
       playing.splice(1, 0, t.innerHTML);
+      document.getElementById('start').disabled = false;
     }
   }
   if (teams.disabled == true && playing.length != jerseys.length)
@@ -163,6 +169,9 @@ function playAudio(i)
       break;
     case 1:
       document.getElementById('beep').play();
+      break;
+    case 2:
+      document.getElementById('scan').play();
       break;
   }
 }

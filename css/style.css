@@ -8,8 +8,8 @@ body
 {
   background-color: var(--charcoal);
   color: var(--text);
-  font-family: 'Ubuntu Condensed';
-  font-size: xx-large;
+  font-family: 'Bloomberg Prop Unicode C', 'Ubuntu Condensed';
+  font-size: large;
 }
 
 section
@@ -20,11 +20,12 @@ section
 button
 {
   font-family: inherit;
-  font-size: x-large;
+  font-size: large;
 }
 
 section#clock
 {
   margin: 10px 0;
-  font-family: 'Bloomberg Fixed Unicode B';
+  font-family: 'Bloomberg Fixed Unicode C';
+  font-size: xx-large;
 }

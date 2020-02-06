@@ -1,0 +1,44 @@
+:root
+{
+  --charcoal: #1e1e1e;
+  --text: #ddd;
+}
+
+body
+{
+  background-color: var(--charcoal);
+  color: var(--text);
+  font-family: 'Bloomberg Prop Unicode C', 'Ubuntu Condensed';
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+button, select
+{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#scoreboard, #control
+{
+  border: 0px solid #ddd;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#timer, #home, #away, #a, #b, #c
+{
+  border: 2px solid #ddd;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 4px;
+}
+
+#timer
+{
+  text-align: center;
+  font-size: 6.0rem;
+  color: greenyellow;
+}
