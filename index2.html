@@ -10,13 +10,15 @@
 <body>
   <section id="scoreboard">
       <section id="home">
-        Home
+        <div>Home</div>
+        <div id="hometeam">Black</div>
       </section>
       <section id="timer">
         00:00
       </section>
       <section id="away">
-        Away
+        <div>Away</div>
+        <div id="awayteam">Yellow</div class="teamname">
       </section>
   </section>
   <section id="control">
@@ -24,14 +26,17 @@
       
     </section>
     <section id="b">
+      <div class="split">
         <label for="gametime">Game Time</label>
-        <select id="gametime">
-          <option value="3:00" selected="selected">3:00</option>
-          <option value="4:00">4:00</option>
-          <option value="5:00">5:00</option>
+        <select class="right" id="gametime">
+          <option value="3:00" selected="selected">03:00</option>
+          <option value="4:00">04:00</option>
+          <option value="5:00">05:00</option>
         </select>
+      </div>
+      <div class="split">
         <label for="change">Team Change</label>
-        <select id="change">
+        <select class="right" id="change">
           <option value="00:15">00:15</option>
           <option value="00:30" selected="selected">00:30</option>
           <option value="00:45">00:45</option>
@@ -41,7 +46,10 @@
           <option value="01:45">01:45</option>
           <option value="02:00">02:00</option>
         </select>
+      </div>
+      <div class="split">
         <button id="start">Start Play</button>
+      </div>
     </section>
     <section id="c">
       

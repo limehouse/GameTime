@@ -20,6 +20,25 @@ button, select
   font-size: inherit;
 }
 
+.split
+{
+  position: relative;
+  padding: 8px;
+}
+
+.right
+{
+  position: absolute;
+  right: 5px;
+}
+
+#start
+{
+  width: 101%;
+  height: 80px;
+  margin: 4px 0 0 0;
+}
+
 #scoreboard, #control
 {
   border: 0px solid #ddd;
@@ -41,4 +60,28 @@ button, select
   text-align: center;
   font-size: 6.0rem;
   color: greenyellow;
+}
+
+#hometeam, #awayteam
+{
+  outline: 0px dotted yellow;
+  font-size: 4.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.teamwhite
+{
+  color: white;
+}
+
+.teamblack
+{
+  color: black;
+}
+
+.teamyellow
+{
+  color: yellow;
 }
