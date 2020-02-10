@@ -22,7 +22,7 @@ button, select
 
 button
 {
-  margin: 2px -1px;
+  margin: 2px;
 }
 
 select
@@ -48,7 +48,7 @@ select
 
 #soundboard button#stop
 {
-  width: 101%;
+  width: 100%;
 }
 
 #timer
