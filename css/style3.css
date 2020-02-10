@@ -1,0 +1,70 @@
+:root
+{
+  --charcoal: #323234;
+  --text: #ddd;
+  --narrow: 'Bebas Neue';
+  --wide: 'Staatliches';
+}
+
+body
+{
+  font-family: var(--narrow);
+  background-color: var(--charcoal);
+  color: var(--text);
+  font-size: 1.5em;
+}
+
+button, select
+{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button
+{
+  margin: 2px -1px;
+}
+
+select
+{
+  position: absolute;
+  right: 6px;
+}
+
+#scoreboard, #gamecontrols
+{
+  display: flex;
+}
+
+#soundboard
+{
+  display: flexbox;
+}
+
+#soundboard button
+{
+  width: 50%;
+}
+
+#soundboard button#stop
+{
+  width: 101%;
+}
+
+#timer
+{
+  text-align: center;
+  font-size: 7.5rem;
+  color: greenyellow;
+  font-family: var(--wide);
+}
+
+.box
+{
+  border: 2px solid #ddd;
+  width: calc(100% / 3);
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  position: relative;
+}
