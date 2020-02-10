@@ -4,29 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Passion+One:400,700|Staatliches&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style2.css">
   <title></title>
 </head>
 <body>
   <section id="scoreboard">
       <section id="home">
-        <div>Home</div>
-        <div id="hometeam">Black</div>
+        <div>Home Team</div>
+        <div id="hometeam" class="teamblack">Black</div>
       </section>
       <section id="timer">
         00:00
       </section>
       <section id="away">
-        <div>Away</div>
-        <div id="awayteam">Yellow</div class="teamname">
+        <div>Away Team</div>
+        <div id="awayteam" class="teamyellow">Yellow</div>
       </section>
   </section>
   <section id="control">
-    <section id="a">
-      
+    <section id="teampicker">
+      <div>Teams</div>
+      <div>
+        <button class="teambtn teamwhite" onclick="console.log(this.innerText)">White</button>
+        <button class="teambtn teamblack" onclick="console.log(this.innerText)">Black</button>
+        <button class="teambtn teamyellow" onclick="console.log(this.innerText)">Yellow</button>
+      </div>
+      <p style="font-family: 'Bebas Neue'; text-align: center;">First team selected plays ONE game</p>
     </section>
     <section id="b">
-      <div class="split">
+      <div>Game Controls</div>
+      <div class="game-controls">
         <label for="gametime">Game Time</label>
         <select class="right" id="gametime">
           <option value="3:00" selected="selected">03:00</option>
@@ -34,7 +42,7 @@
           <option value="5:00">05:00</option>
         </select>
       </div>
-      <div class="split">
+      <div class="game-controls">
         <label for="change">Team Change</label>
         <select class="right" id="change">
           <option value="00:15">00:15</option>
@@ -47,12 +55,22 @@
           <option value="02:00">02:00</option>
         </select>
       </div>
-      <div class="split">
-        <button id="start">Start Play</button>
+      <div class="game-controls bottom">
+        <button id="start" onclick="console.log(this.innerHTML)">Start Play</button>
+        <button id="demo" onclick="console.log(this.innerHTML)">Demo Mode</button>
       </div>
     </section>
-    <section id="c">
-      
+    <section id="soundboard">
+      <div>Soundboard</div>
+      <div>
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Horn</button class="soundboardbtn">
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Track #?</button class="soundboardbtn">
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Track #1</button class="soundboardbtn">
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Track #2</button class="soundboardbtn">
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Track #3</button class="soundboardbtn">
+        <button class="soundboardbtn" onclick="console.log(this.innerHTML)">Track #4</button class="soundboardbtn">
+        <button class="soundboardbtn" id="stopsound" onclick="console.log(this.innerHTML)">Stop Playback</button class="soundboardbtn">
+      </div>
     </section>
   </section>
   <audio id="horn">

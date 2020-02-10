@@ -1,6 +1,6 @@
 :root
 {
-  --charcoal: #1e1e1e;
+  --charcoal: #323234;
   --text: #ddd;
 }
 
@@ -8,10 +8,11 @@ body
 {
   background-color: var(--charcoal);
   color: var(--text);
-  font-family: 'Bloomberg Prop Unicode C', 'Ubuntu Condensed';
+  font-family: 'Bebas Neue', 'xPassion One', 'Staatliches', 'Bloomberg Prop Unicode C', 'Ubuntu Condensed';
   font-size: 1.5em;
-  margin: 0;
+  margin: 10px auto;
   padding: 0;
+  max-width: 1100px;
 }
 
 button, select
@@ -20,10 +21,20 @@ button, select
   font-size: inherit;
 }
 
-.split
+#b
+{
+  display: relative;
+}
+
+.game-controls
 {
   position: relative;
   padding: 8px;
+}
+
+.bottom
+{
+  margin-top: 4%;
 }
 
 .right
@@ -34,9 +45,42 @@ button, select
 
 #start
 {
+  border: 1px solid #22b14c;
+  background-color: #22b14c;
+}
+
+#demo
+{
+  border: 1px solid hotpink;
+  background-color: hotpink;
+}
+
+#start, #demo
+{
   width: 101%;
-  height: 80px;
+  height: 60px;
   margin: 4px 0 0 0;
+}
+
+.teambtn
+{
+  height: 60px;
+  width: calc(97%/3);
+}
+
+.soundboardbtn
+{
+  display: flexbox;
+  width: calc((98%/2));
+  height: 60px;
+}
+
+#stopsound
+{
+  width: 99%;
+  border: 1px solid #d01a1e;
+  background-color: #d01a1e;
+  margin-top: 2px;
 }
 
 #scoreboard, #control
@@ -47,9 +91,10 @@ button, select
   margin: 0;
 }
 
-#timer, #home, #away, #a, #b, #c
+#timer, #home, #away, #teampicker, #b, #soundboard
 {
   border: 2px solid #ddd;
+  border-radius: 8px;
   width: 100%;
   padding: 8px 12px;
   margin: 4px;
@@ -58,8 +103,9 @@ button, select
 #timer
 {
   text-align: center;
-  font-size: 6.0rem;
+  font-size: 7.5rem;
   color: greenyellow;
+  font-family: 'Staatliches';
 }
 
 #hometeam, #awayteam
@@ -69,19 +115,33 @@ button, select
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  margin: 16px 0 0 0;
+  font-family: 'Staatliches';
+  border-radius: 8px;
+}
+
+.teamwhite, .teamblack, .teamyellow
+{
+  border: 1px solid;
 }
 
 .teamwhite
 {
-  color: white;
+  background-color: white;
+  border-color: white;
+  color: black;
 }
 
 .teamblack
 {
-  color: black;
+  background-color: black;
+  border-color: black;
+  color: white;
 }
 
 .teamyellow
 {
-  color: yellow;
+  background-color: orange;
+  border-color: orange;
+  color: black;
 }
