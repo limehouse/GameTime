@@ -1,0 +1,88 @@
+:root
+{
+  --charcoal: #323234;
+  --text: #ddd;
+  --narrow: 'Bebas Neue';
+  --wide: 'Staatliches';
+}
+
+body
+{
+  font-family: var(--wide);
+  background-color: var(--charcoal);
+  color: var(--text);
+}
+
+#content
+{
+  display: table;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+#middle
+{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#timer
+{
+  color: greenyellow;
+  font-family: var(--wide);
+  font-size: 60vh;
+  height: 75vh;
+}
+
+#playing
+{
+  font-size: 15vh;
+  display: flex;
+  margin: 0 10%;
+}
+
+#home, #away
+{
+  border-radius: 8px;
+  width: 50%;
+}
+
+#vs
+{
+  font-size: xx-large;
+  position: relative;
+  bottom: -32px;
+  right: 0;
+  left: 0;
+  height: 0;
+  margin: 0 5%;
+}
+
+#teamyellow, #teamwhite, #teamblack
+{
+}
+
+.teamwhite
+{
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+.teamblack
+{
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.teamyellow
+{
+  background-color: orange;
+  border-color: orange;
+  color: black;
+}
