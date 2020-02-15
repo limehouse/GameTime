@@ -41,25 +41,19 @@ body
 #playing
 {
   font-size: 15vh;
-  display: flex;
-  margin: 0 10%;
+  display: -webkit-inline-box;
 }
 
 #home, #away
 {
   border-radius: 8px;
-  width: 50%;
+  width: 50vh;
 }
 
 #vs
 {
-  font-size: xx-large;
-  position: relative;
-  bottom: -32px;
-  right: 0;
-  left: 0;
-  height: 0;
-  margin: 0 5%;
+  margin: 0 35px;
+  color: #1e1e1e;
 }
 
 #teamyellow, #teamwhite, #teamblack
