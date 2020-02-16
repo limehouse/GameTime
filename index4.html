@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#323234" />
   <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Bebas+Neue|Staatliches|Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style4.css">
   <title></title>
@@ -11,7 +12,7 @@
 <body>
   <article id="content">
     <div id="middle">
-      <div id="timer" onclick="startpause(this)">03:41</div>
+      <div id="timer" onclick="startpause(this)">Start</div>
       <div id="controls">
         <label for="gametime">Game Time</label>
           <select name="gametime" id="gametime">
@@ -31,6 +32,7 @@
             <option value="120">02:00</option>
           </select>
         </div>
+        <button id="demo" onclick="demonstration()">Demo</button>
       <!-- <div id="playing">
         <div class="teamyellow" id="home">yellow</div>
         <span id="vs">vs</span>
