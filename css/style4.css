@@ -4,6 +4,18 @@
   --text: #ddd;
   --narrow: 'Bebas Neue';
   --wide: 'Staatliches';
+  --mono: 'Crystal';
+  --gold: gold;
+}
+
+@font-face {
+  font-family: Crystal;
+  src: url(/fonts/LiquidCrystal-Normal.otf);
+}
+
+@font-face {
+  font-family: Bloomberg;
+  src: url(/fonts/Bloomberg-PropU_0.ttf);
 }
 
 body
@@ -11,6 +23,24 @@ body
   font-family: var(--wide);
   background-color: var(--charcoal);
   color: var(--text);
+}
+
+select
+{
+  margin: 0 10px;
+}
+
+select, select option
+{
+  font-family: 'Bloomberg';
+  background: var(--charcoal);
+  color: var(--gold);
+  padding: 0 8px;
+}
+
+select, label
+{
+  font-size: 8.5vh;
 }
 
 #content
@@ -33,9 +63,9 @@ body
 #timer
 {
   color: greenyellow;
-  font-family: var(--wide);
-  font-size: 60vh;
-  height: 75vh;
+  font-family: var(--mono);
+  font-size: 55vh;
+  margin-left: 18px;
 }
 
 #playing
@@ -54,6 +84,14 @@ body
 {
   margin: 0 35px;
   color: #1e1e1e;
+}
+
+#controls
+{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
 }
 
 #teamyellow, #teamwhite, #teamblack
@@ -76,7 +114,7 @@ body
 
 .teamyellow
 {
-  background-color: orange;
-  border-color: orange;
+  background-color: gold;
+  border-color: gold;
   color: black;
 }

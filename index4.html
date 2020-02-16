@@ -4,20 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Bebas+Neue|Staatliches|Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style4.css">
   <title></title>
 </head>
 <body>
   <article id="content">
     <div id="middle">
-      <div id="timer">04:00</div>
-      <div id="playing">
-        <div class="teamblack" id="home">Black</div>
+      <div id="timer" onclick="startpause(this)">03:41</div>
+      <div id="controls">
+        <label for="gametime">Game Time</label>
+          <select name="gametime" id="gametime">
+            <option value="180">03:00</option>
+            <option value="240" selected="selected">04:00</option>
+            <option value="300">05:00</option>
+          </select>
+        <label for="intermission">Change Time</label>
+          <select name="intermission" id="intermission">
+            <option value="15">00:15</option>
+            <option value="30">00:30</option>
+            <option value="45" selected="selected">00:45</option>
+            <option value="60">01:00</option>
+            <option value="75">01:15</option>
+            <option value="90">01:30</option>
+            <option value="105">01:45</option>
+            <option value="120">02:00</option>
+          </select>
+        </div>
+      <!-- <div id="playing">
+        <div class="teamyellow" id="home">yellow</div>
         <span id="vs">vs</span>
         <div class="teamwhite" id="away">white</div>
       </div>
-    </div>
+    </div> -->
   </article>
 </body>
+<script src="js/gametime4.js"></script>
 </html>
