@@ -10,12 +10,12 @@
 
 @font-face {
   font-family: Crystal;
-  src: url(/fonts/LiquidCrystal-Normal.otf);
+  src: url(https://raw.githubusercontent.com/limehouse/GameTime/master/fonts/LiquidCrystal-Normal.otf);
 }
 
 @font-face {
   font-family: Bloomberg;
-  src: url(/fonts/Bloomberg-PropU_0.ttf);
+  src: url(https://raw.githubusercontent.com/limehouse/GameTime/master/fonts/Bloomberg-PropU_0.ttf);
 }
 
 body
